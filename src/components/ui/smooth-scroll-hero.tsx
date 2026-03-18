@@ -44,8 +44,9 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
   return (
     <div ref={containerRef} style={{ height: `${scrollHeight}px` }} className="relative w-full">
       <motion.div
-        className="sticky top-0 h-screen w-full bg-black overflow-hidden"
+        className="sticky top-0 h-screen w-full overflow-hidden"
         style={{
+          backgroundColor: "#0a1a0e",
           clipPath,
           willChange: "transform",
         }}

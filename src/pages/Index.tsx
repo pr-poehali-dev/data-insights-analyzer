@@ -165,8 +165,8 @@ export default function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-gray-900 border-2 border-yellow-400 p-8 rounded-none relative text-white"
-              style={{ clipPath: "polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)" }}
+              className="border-2 border-yellow-400 p-8 rounded-none relative text-white"
+              style={{ backgroundColor: "#0f1f14", clipPath: "polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)" }}
             >
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-900 text-xs font-black px-4 py-1 tracking-wider">
                 ТОП ВЫБОР
