@@ -5,147 +5,91 @@ import { cn } from "@/lib/utils"
 
 const SQRT_5000 = Math.sqrt(5000)
 
-// Running club testimonials data with randomly generated icons
+// Testimonials from sponsors and participants of «Саранская красавица»
 const testimonials = [
   {
     tempId: 0,
     testimonial:
-      "Stride Collective изменил мою жизнь. От попыток пробежать 5 минут до первого марафона — это сообщество верило в меня, когда я сам в себя не верил.",
-    by: "Сергей Иванов, марафонец",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=SergeyIvanov&backgroundColor=3b82f6&textColor=ffffff",
+      "Наш бренд впервые стал партнёром «Саранской красавицы» — и это лучшее маркетинговое решение года. Живой контакт с аудиторией, охват в соцсетях и искренние эмоции зрителей — это не купишь за деньги.",
+    by: "Алексей Романов, директор по маркетингу, ТЦ «Меридиан»",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AlexeyRomanov&backgroundColor=b45309&textColor=ffffff",
   },
   {
     tempId: 1,
     testimonial:
-      "Я боялась присоединиться к беговой группе, но Stride Collective встретил меня с распростертыми объятиями. Теперь у меня друзья на всю жизнь и уверенность достигать любых целей.",
-    by: "Марина Петрова, трейлраннер",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=MarinaPetrova&backgroundColor=10b981&textColor=ffffff",
+      "Участие в конкурсе изменило мою жизнь. Я обрела уверенность, нашла потрясающих подруг и получила предложение о работе. «Саранская красавица» — это трамплин для каждой девушки.",
+    by: "Алина Кузнецова, победительница 2024 года",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AlinaKuznetsova&backgroundColor=db2777&textColor=ffffff",
   },
   {
     tempId: 2,
     testimonial:
-      "Энергетика на пробежках Stride Collective заразительна. Быстрый ты или медленный — все болеют за тебя. Здесь не соревнование, здесь сообщество.",
-    by: "Анна Козлова, любитель 5К",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AnnaKozlova&backgroundColor=8b5cf6&textColor=ffffff",
+      "Мероприятие собрало весь цвет Саранска — от молодёжи до уважаемых горожан. Наш стенд посетили сотни человек, и мы получили в три раза больше лидов, чем на обычной выставке.",
+    by: "Ирина Власова, руководитель, «Красота и Здоровье»",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=IrinaVlasova&backgroundColor=7c3aed&textColor=ffffff",
   },
   {
     tempId: 3,
     testimonial:
-      "После лет одиночных пробежек Stride Collective стал для меня открытием. Групповые тренировки помогли выйти на личные рекорды, о которых я и мечтать не мог.",
-    by: "Дмитрий Смирнов, спринтер",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=DmitrySmirnov&backgroundColor=ef4444&textColor=ffffff",
+      "Организаторы — профессионалы. Всё продумано до мелочей: брендирование, медиа, координация. Я рекомендую «Саранскую красавицу» как надёжную площадку для продвижения бренда.",
+    by: "Дмитрий Орлов, предприниматель",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=DmitryOrlov&backgroundColor=0891b2&textColor=ffffff",
   },
   {
     tempId: 4,
     testimonial:
-      "Stride Collective научил меня, что бег — это не просто тренировка. Это терапия, дружба и приключение в одном флаконе. Этот клуб спас мое ментальное здоровье.",
-    by: "Елена Новикова, осознанный бегун",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=ElenaNovikova&backgroundColor=f59e0b&textColor=ffffff",
+      "Зал был переполнен, атмосфера — потрясающая. Публикации в соцсетях с нашим логотипом набрали десятки тысяч просмотров. Мы уже подтвердили участие в следующем году.",
+    by: "Наталья Степанова, бренд-менеджер, сеть аптек «Фармацея»",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=NatalyaStepanova&backgroundColor=16a34a&textColor=ffffff",
   },
   {
     tempId: 5,
     testimonial:
-      "От дивана до 10К за 6 месяцев с поддержкой Stride Collective. Они принимают тебя таким, какой ты есть, и помогают понять, куда ты можешь дойти. Настоящая магия.",
-    by: "Алексей Морозов, история успеха",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AlexeyMorozov&backgroundColor=6366f1&textColor=ffffff",
+      "Для нас это был первый опыт спонсорства конкурса красоты. Мы были приятно удивлены: целевая аудитория — именно наши клиенты. Конверсия от мероприятия превзошла ожидания.",
+    by: "Марина Фёдорова, владелец студии красоты «Luxe»",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=MarinaFedorova&backgroundColor=dc2626&textColor=ffffff",
   },
   {
     tempId: 6,
     testimonial:
-      "Рассветные пробежки со Stride Collective — это духовный опыт. Есть что-то мощное в том, чтобы двигаться вместе, пока мир просыпается вокруг нас.",
-    by: "Айгуль Рахимова, рассветный патруль",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AigulRahimova&backgroundColor=ec4899&textColor=ffffff",
+      "«Саранская красавица» — это не просто шоу. Это событие, которое объединяет город. Стать его частью в качестве спонсора — значит быть рядом с тем, что важно людям.",
+    by: "Сергей Белов, генеральный директор, IT-компания «ТехноСаранск»",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=SergeyBelov&backgroundColor=2563eb&textColor=ffffff",
   },
   {
     tempId: 7,
     testimonial:
-      "Я вступила в Stride Collective после переезда в новый город. Нашла не только беговое племя, но и настоящую семью. Движение здесь — это образ жизни.",
-    by: "Ольга Ким, строитель сообщества",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=OlgaKim&backgroundColor=06b6d4&textColor=ffffff",
+      "Я участвовала в конкурсе три года назад, а сейчас веду свой бизнес и сама хочу стать спонсором. Это мероприятие даёт девушкам крылья — и я хочу поддержать это.",
+    by: "Екатерина Лебедева, участница 2021, предприниматель",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=EkaterinaLebedeva&backgroundColor=ea580c&textColor=ffffff",
   },
   {
     tempId: 8,
     testimonial:
-      "Stride Collective празднует каждую победу, даже самую маленькую. Мой первый километр ощущался как олимпийское золото с этой командой, болеющей за меня.",
-    by: "Наталья Соколова, герой первого км",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=NataliyaSokolova&backgroundColor=f97316&textColor=ffffff",
+      "Пресс-волл с нашим логотипом попал во все местные СМИ и социальные сети. Узнаваемость бренда после конкурса выросла ощутимо — и это без дополнительных вложений в рекламу.",
+    by: "Андрей Кириллов, ювелирный дом «Золотая Мордовия»",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AndreyKirillov&backgroundColor=a855f7&textColor=ffffff",
   },
   {
     tempId: 9,
     testimonial:
-      "Тренировочные планы в Stride Collective невероятные. Я прошел путь от еле добегающего 5К до квалификации на Бостонский марафон всего за два года.",
-    by: "Михаил Волков, Бостонский квалификант",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=MikhailVolkov&backgroundColor=84cc16&textColor=ffffff",
+      "Зрители запоминают не только участниц, но и партнёров мероприятия. Наш бренд ассоциируется теперь с красотой, женственностью и праздником — лучшего позиционирования не придумать.",
+    by: "Юлия Иванова, директор, школа танцев «Эстрелья»",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=YuliyaIvanova&backgroundColor=0d9488&textColor=ffffff",
   },
   {
     tempId: 10,
     testimonial:
-      "Что я люблю в Stride Collective — это разнообразие. Бегуны всех возрастов, с разным опытом и способностями объединяются одной страстью.",
-    by: "София Родригес, чемпион разнообразия",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=SofiaRodriguez&backgroundColor=a855f7&textColor=ffffff",
+      "Мероприятие отличается высоким уровнем организации и статусной аудиторией. Для нас спонсорство — это инвестиция в репутацию, и «Саранская красавица» оправдала каждый рубль.",
+    by: "Олег Захаров, ресторан «Мордовская усадьба»",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=OlegZakharov&backgroundColor=be185d&textColor=ffffff",
   },
   {
     tempId: 11,
     testimonial:
-      "Дисциплина в Stride Collective не имеет равных. Когда знаешь, что твоя беговая семья ждет тебя — выходишь на пробежку несмотря ни на что.",
-    by: "Тимур Асланов, король постоянства",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=TimurAslanov&backgroundColor=059669&textColor=ffffff",
-  },
-  {
-    tempId: 12,
-    testimonial:
-      "Трейловая группа Stride Collective открыла мне самые красивые места, о которых я и не знал. Бег стал моим способом исследовать мир.",
-    by: "Нина Павлова, исследователь троп",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=NinaPavlova&backgroundColor=0ea5e9&textColor=ffffff",
-  },
-  {
-    tempId: 13,
-    testimonial:
-      "Разговоры после пробежек в Stride Collective ценны не меньше самих пробежек. Мы решаем мировые проблемы километр за километром.",
-    by: "Роман Ким, философ бега",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=RomanKim&backgroundColor=dc2626&textColor=ffffff",
-  },
-  {
-    tempId: 14,
-    testimonial:
-      "Я никогда не думала, что стану бегуном, но дружелюбный к новичкам подход Stride Collective сделал это возможным. Теперь не представляю жизни без бега.",
-    by: "Екатерина Орлова, позднее цветение",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=EkaterinaOrlova&backgroundColor=7c3aed&textColor=ffffff",
-  },
-  {
-    tempId: 15,
-    testimonial:
-      "Поддержка при травмах в Stride Collective потрясающая. Когда я выбыл, они поддерживали мою мотивацию и помогли вернуться сильнее.",
-    by: "Даниил Пак, история возвращения",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=DaniilPak&backgroundColor=ea580c&textColor=ffffff",
-  },
-  {
-    tempId: 16,
-    testimonial:
-      "Благотворительные забеги Stride Collective придают нашим километрам смысл. Мы бежим не только для себя — мы бежим, чтобы изменить мир к лучшему.",
-    by: "Раиса Грин, чемпион благотворительности",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=RaisaGrin&backgroundColor=16a34a&textColor=ffffff",
-  },
-  {
-    tempId: 17,
-    testimonial:
-      "Мастер-классы по технике в Stride Collective преобразили мою беговую форму. Я стал быстрее и забыл о травмах благодаря экспертному руководству.",
-    by: "Кирилл Вонг, перфекционист формы",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=KirillVong&backgroundColor=2563eb&textColor=ffffff",
-  },
-  {
-    tempId: 18,
-    testimonial:
-      "Виртуальные забеги Stride Collective во время локдауна спасли мой рассудок. Даже когда мы не могли бегать вместе, мы оставались связаны как сообщество.",
-    by: "Александра Фостер, виртуальный воин",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AlexandraFoster&backgroundColor=be185d&textColor=ffffff",
-  },
-  {
-    tempId: 19,
-    testimonial:
-      "Наставничество в Stride Collective меняет жизни. Опытные бегуны берут новичков под крыло и щедро делятся своей мудростью.",
-    by: "Карлос Мендес, благодарный ученик",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=CarlosMendez&backgroundColor=0891b2&textColor=ffffff",
+      "Именная номинация от нашего бренда вызвала огромный резонанс. Победительница активно нас упоминает в соцсетях — это живая реклама, которая работает ещё год после конкурса.",
+    by: "Татьяна Михайлова, бренд «TM Cosmetics Saransk»",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=TatianaMikhailova&backgroundColor=1d4ed8&textColor=ffffff",
   },
 ]
 
