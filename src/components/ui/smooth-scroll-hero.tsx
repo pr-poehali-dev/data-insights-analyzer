@@ -195,13 +195,13 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
                 <div className="flex flex-col items-center gap-2">
                   <div className="bg-white p-3">
                     <img
-                      src={`https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=${encodeURIComponent('tel:+79026683540')}&color=111111&bgcolor=ffffff`}
-                      alt="QR-код для звонка"
+                      src={`https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=${encodeURIComponent('https://t.me/+79026683540')}&color=111111&bgcolor=ffffff`}
+                      alt="QR-код Telegram"
                       width={100}
                       height={100}
                     />
                   </div>
-                  <span className="text-xs text-gray-500 font-medium">Сканируй для звонка</span>
+                  <span className="text-xs text-gray-500 font-medium">Сканируй для Telegram</span>
                 </div>
               </div>
             </div>
