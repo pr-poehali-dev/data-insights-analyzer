@@ -5,6 +5,7 @@ import { StaggerTestimonials } from "@/components/ui/stagger-testimonials"
 import { motion } from "framer-motion"
 import SmoothScrollHero from "@/components/ui/smooth-scroll-hero"
 import SponsorBenefitsGrid from "@/components/SponsorBenefitsGrid"
+import EventLocation from "@/components/EventLocation"
 
 export default function Index() {
   const missionStatement =
@@ -102,6 +103,9 @@ export default function Index() {
           <Timeline entries={timelineEntries} />
         </div>
       </section>
+
+      {/* Event Location */}
+      <EventLocation />
 
       {/* Sponsorship Packages Section */}
       <section className="relative py-20 bg-gray-50">

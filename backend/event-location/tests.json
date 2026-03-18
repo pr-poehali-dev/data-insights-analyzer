@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "name": "Get main event location",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {"location": {}},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
