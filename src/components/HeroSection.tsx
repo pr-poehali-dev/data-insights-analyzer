@@ -146,7 +146,7 @@ export default function HeroSection() {
             <div className="grid grid-cols-3 gap-4">
               {[
                 { value: "5 000+", label: "Зрителей" },
-                { value: "50K+", label: "Онлайн" },
+                { value: "100 000+", label: "Охват в СМИ" },
                 { value: "3", label: "Года проводим" },
               ].map((s) => (
                 <div key={s.label} className="border border-yellow-400/20 p-4 text-center" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
