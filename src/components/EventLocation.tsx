@@ -48,7 +48,7 @@ export default function EventLocation() {
     <section className="relative py-24 bg-gray-950 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10 pointer-events-none"
-        style={{ backgroundImage: "radial-gradient(circle at 20% 50%, #eab308 0%, transparent 50%), radial-gradient(circle at 80% 50%, #7c3aed 0%, transparent 50%)" }}
+        style={{ backgroundImage: "radial-gradient(circle at 20% 50%, #eab308 0%, transparent 50%), radial-gradient(circle at 80% 50%, #4a3728 0%, transparent 50%)" }}
       />
 
       <div className="container mx-auto px-6 relative z-10">

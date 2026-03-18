@@ -30,7 +30,7 @@ export default function HeroSection() {
           backgroundSize: "cover",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-purple-950/40 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-stone-900/40 to-black/70" />
       </div>
 
       {/* Gold decorative line top */}
