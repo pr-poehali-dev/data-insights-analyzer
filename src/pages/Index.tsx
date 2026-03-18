@@ -222,8 +222,8 @@ export default function Index() {
       <section id="join" className="relative">
         <SmoothScrollHero
           scrollHeight={2500}
-          desktopImage="https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/files/ada85470-42ef-4f32-a575-af1b533a4362.jpg"
-          mobileImage="https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/files/ada85470-42ef-4f32-a575-af1b533a4362.jpg"
+          desktopImage="https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/files/50ceae66-928a-4fec-83f8-76cf2518d489.jpg"
+          mobileImage="https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/files/50ceae66-928a-4fec-83f8-76cf2518d489.jpg"
           initialClipPercentage={30}
           finalClipPercentage={70}
         />
