@@ -147,7 +147,7 @@ export default function HeroSection() {
               {[
                 { value: "5 000+", label: "Зрителей" },
                 { value: "100 000+", label: "Охват в СМИ" },
-                { value: "3", label: "Года проводим" },
+                { value: "3", label: "Года на площадках" },
               ].map((s) => (
                 <div key={s.label} className="border border-yellow-400/20 p-4 text-center" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
                   <div className="text-yellow-400 font-black text-xl mb-1" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.6rem" }}>
