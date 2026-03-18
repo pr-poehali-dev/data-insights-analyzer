@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "name": "Get sponsor benefits",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {"benefits": []},
+      "bodyMatcher": "partial"
+    }
+  ]
+}

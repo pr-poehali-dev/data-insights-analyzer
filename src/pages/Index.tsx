@@ -4,6 +4,7 @@ import { Timeline } from "@/components/ui/timeline"
 import { StaggerTestimonials } from "@/components/ui/stagger-testimonials"
 import { motion } from "framer-motion"
 import SmoothScrollHero from "@/components/ui/smooth-scroll-hero"
+import SponsorBenefitsGrid from "@/components/SponsorBenefitsGrid"
 
 export default function Index() {
   const missionStatement =
@@ -181,6 +182,9 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Sponsor Benefits Grid */}
+      <SponsorBenefitsGrid />
 
       {/* Testimonials Section */}
       <section id="testimonials" className="relative py-20 bg-white">
