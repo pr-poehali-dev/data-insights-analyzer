@@ -86,11 +86,11 @@ export default function HeroSection() {
             Коммерческое предложение для спонсоров
           </p>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-wide mb-4 leading-none">
-            САРАНСКАЯ
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-semibold tracking-wide mb-4 leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            Саранская
             <br />
-            <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-200 bg-clip-text text-transparent">
-              КРАСАВИЦА
+            <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-200 bg-clip-text text-transparent italic">
+              Красавица
             </span>
           </h1>
 

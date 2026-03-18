@@ -89,11 +89,11 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
             <p className="text-yellow-400 text-sm font-semibold tracking-[0.3em] uppercase mb-4">
               Стать спонсором
             </p>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-wider mb-6 leading-none">
-              ГОТОВЫ
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-wide mb-6 leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              Готовы
               <br />
-              <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-200 bg-clip-text text-transparent">
-                СОТРУДНИЧАТЬ?
+              <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-200 bg-clip-text text-transparent italic">
+                сотрудничать?
               </span>
             </h2>
 
