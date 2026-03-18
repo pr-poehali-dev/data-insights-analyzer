@@ -142,7 +142,7 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
                     <Trophy className="w-5 h-5 text-yellow-300" />
                   </div>
                 </div>
-                <div className="text-2xl md:text-3xl font-black text-white mb-1">5</div>
+                <div className="text-2xl md:text-3xl font-black text-white mb-1">3</div>
                 <div className="text-xs md:text-sm text-gray-300 font-medium">Лет мероприятию</div>
               </div>
             </div>
