@@ -2,7 +2,7 @@ import type * as React from "react"
 import { useRef } from "react"
 import { motion, useMotionTemplate, useScroll, useTransform } from "framer-motion"
 import { LiquidButton } from "@/components/ui/liquid-glass-button"
-import { MapPin, Users, Calendar, Trophy } from "lucide-react"
+import { MapPin, Users, Calendar, Trophy, Phone, Mail } from "lucide-react"
 
 interface SmoothScrollHeroProps {
   scrollHeight?: number
@@ -156,12 +156,53 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
             </LiquidButton>
 
             {/* Contact Info */}
-            <div className="mt-12 pt-6 border-t border-white/20">
-              <p className="text-xs text-gray-400 mb-3 font-medium tracking-widest">КОНТАКТЫ ОРГАНИЗАТОРОВ</p>
-              <div className="flex flex-wrap justify-center items-center gap-6 text-gray-200">
-                <span className="text-sm font-semibold">📞 +7 (8342) 000-000</span>
-                <span className="text-sm font-semibold">✉️ info@saranskaya-krasavica.ru</span>
-                <span className="text-sm font-semibold">📍 Саранск, Республика Мордовия</span>
+            <div className="mt-12 pt-6 border-t border-yellow-400/30">
+              <p className="text-xs text-yellow-400 mb-6 font-bold tracking-[0.3em] uppercase">Контакты организаторов</p>
+
+              <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+                {/* Contact cards */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="tel:+79026683540"
+                    className="flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-yellow-400/50 px-5 py-3 transition-all duration-200 group"
+                    style={{ clipPath: "polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0 100%)" }}
+                  >
+                    <div className="w-8 h-8 bg-yellow-400/20 flex items-center justify-center shrink-0">
+                      <Phone className="w-4 h-4 text-yellow-400" />
+                    </div>
+                    <div className="text-left">
+                      <div className="text-xs text-gray-400 font-medium">Телефон</div>
+                      <div className="text-white font-bold text-sm group-hover:text-yellow-300 transition-colors">+7 (902) 668-35-40</div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="mailto:saransk1641@bk.ru"
+                    className="flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-yellow-400/50 px-5 py-3 transition-all duration-200 group"
+                    style={{ clipPath: "polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0 100%)" }}
+                  >
+                    <div className="w-8 h-8 bg-yellow-400/20 flex items-center justify-center shrink-0">
+                      <Mail className="w-4 h-4 text-yellow-400" />
+                    </div>
+                    <div className="text-left">
+                      <div className="text-xs text-gray-400 font-medium">Email / Telegram</div>
+                      <div className="text-white font-bold text-sm group-hover:text-yellow-300 transition-colors">saransk1641@bk.ru</div>
+                    </div>
+                  </a>
+                </div>
+
+                {/* QR code */}
+                <div className="flex flex-col items-center gap-2">
+                  <div className="bg-white p-3">
+                    <img
+                      src={`https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=${encodeURIComponent('tel:+79026683540')}&color=111111&bgcolor=ffffff`}
+                      alt="QR-код для звонка"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
+                  <span className="text-xs text-gray-500 font-medium">Сканируй для звонка</span>
+                </div>
               </div>
             </div>
           </div>
