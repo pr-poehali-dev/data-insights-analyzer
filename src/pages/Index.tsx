@@ -53,7 +53,7 @@ export default function Index() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-yellow-500 text-sm font-semibold tracking-[0.3em] uppercase mb-4">О мероприятии</p>
-            <h2 className="text-4xl md:text-6xl font-black tracking-wider mb-12 text-gray-900">
+            <h2 className="text-4xl md:text-6xl font-light tracking-wider mb-12 text-gray-900">
               ПОЧЕМУ МЫ?
             </h2>
             <TextGradientScroll
@@ -72,7 +72,7 @@ export default function Index() {
                 { value: "5", label: "Лет проводим событие" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <div className="text-3xl md:text-4xl font-black text-gray-900 mb-2">{stat.value}</div>
+                  <div className="text-3xl md:text-4xl font-light text-gray-900 mb-2" style={{ fontFamily: "'Cormorant Garamond', serif", letterSpacing: "0.05em" }}>{stat.value}</div>
                   <div className="text-sm text-gray-500 font-medium">{stat.label}</div>
                 </div>
               ))}
@@ -91,7 +91,7 @@ export default function Index() {
               <p className="text-yellow-500 text-sm font-semibold tracking-[0.3em] uppercase mb-4">
                 Аудитория и возможности
               </p>
-              <h2 className="text-4xl md:text-6xl font-black tracking-wider mb-6 text-gray-900">
+              <h2 className="text-4xl md:text-6xl font-light tracking-wider mb-6 text-gray-900">
                 ВАШ БРЕНД В ЦЕНТРЕ СОБЫТИЯ
               </h2>
               <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -112,7 +112,7 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-yellow-500 text-sm font-semibold tracking-[0.3em] uppercase mb-4">Пакеты спонсорства</p>
-            <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900">
+            <h2 className="text-4xl md:text-6xl font-light tracking-wider text-gray-900">
               ВЫБЕРИТЕ УРОВЕНЬ
             </h2>
           </div>
@@ -127,8 +127,8 @@ export default function Index() {
               className="bg-white border-2 border-amber-700/30 p-8 rounded-none relative"
               style={{ clipPath: "polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)" }}
             >
-              <div className="text-amber-700 text-xs font-bold tracking-[0.3em] uppercase mb-2">Бронзовый</div>
-              <div className="text-3xl font-black text-gray-900 mb-1">от 30 000 ₽</div>
+              <div className="text-amber-700 text-xs font-medium tracking-[0.3em] uppercase mb-2">Бронзовый</div>
+              <div className="text-3xl font-light text-gray-900 mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>от 30 000 ₽</div>
               <div className="text-gray-400 text-sm mb-6">Партнёр мероприятия</div>
               <ul className="space-y-3 text-sm text-gray-600">
                 <li className="flex items-start gap-2"><span className="text-amber-600 mt-0.5">✦</span> Логотип на афише и баннерах</li>
@@ -147,8 +147,8 @@ export default function Index() {
               className="bg-white border-2 border-gray-400/50 p-8 rounded-none relative"
               style={{ clipPath: "polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)" }}
             >
-              <div className="text-gray-500 text-xs font-bold tracking-[0.3em] uppercase mb-2">Серебряный</div>
-              <div className="text-3xl font-black text-gray-900 mb-1">от 80 000 ₽</div>
+              <div className="text-gray-500 text-xs font-medium tracking-[0.3em] uppercase mb-2">Серебряный</div>
+              <div className="text-3xl font-light text-gray-900 mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>от 80 000 ₽</div>
               <div className="text-gray-400 text-sm mb-6">Официальный партнёр</div>
               <ul className="space-y-3 text-sm text-gray-600">
                 <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Всё из бронзового пакета</li>
@@ -168,11 +168,11 @@ export default function Index() {
               className="border-2 border-yellow-400 p-8 rounded-none relative text-white"
               style={{ backgroundColor: "#0f1f14", clipPath: "polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)" }}
             >
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-900 text-xs font-black px-4 py-1 tracking-wider">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-900 text-xs font-medium px-4 py-1 tracking-wider">
                 ТОП ВЫБОР
               </div>
-              <div className="text-yellow-400 text-xs font-bold tracking-[0.3em] uppercase mb-2">Золотой</div>
-              <div className="text-3xl font-black text-white mb-1">от 200 000 ₽</div>
+              <div className="text-yellow-400 text-xs font-medium tracking-[0.3em] uppercase mb-2">Золотой</div>
+              <div className="text-3xl font-light text-white mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>от 200 000 ₽</div>
               <div className="text-gray-400 text-sm mb-6">Генеральный спонсор</div>
               <ul className="space-y-3 text-sm text-gray-300">
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Всё из серебряного пакета</li>
