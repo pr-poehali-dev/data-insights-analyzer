@@ -145,7 +145,7 @@ export default function HeroSection() {
 
             <div className="grid grid-cols-3 gap-4">
               {[
-                { value: "5 000+", label: "Зрителей" },
+                { value: "3 000+", label: "Зрителей" },
                 { value: "100 000+", label: "Охват в СМИ" },
                 { value: "3", label: "Года на площадках" },
               ].map((s) => (

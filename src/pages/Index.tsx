@@ -66,7 +66,7 @@ export default function Index() {
             {/* Key Facts */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
               {[
-                { value: "2 000+", label: "Зрителей на площадке" },
+                { value: "3 000+", label: "Зрителей на площадке" },
                 { value: "50 000+", label: "Онлайн-просмотров" },
                 { value: "30+", label: "Участниц конкурса" },
                 { value: "5", label: "Лет проводим событие" },
