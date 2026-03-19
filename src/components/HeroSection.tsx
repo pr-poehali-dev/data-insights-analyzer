@@ -124,7 +124,7 @@ export default function HeroSection() {
 
             <button
               onClick={() => scrollToSection("#join")}
-              className="inline-flex items-center gap-3 text-gray-900 font-bold text-sm tracking-widest uppercase px-8 py-4 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-3 text-gray-900 font-medium text-sm tracking-widest uppercase px-8 py-4 transition-all duration-300 hover:scale-105"
               style={{ background: "linear-gradient(135deg, #f5d060, #e8a020)", clipPath: "polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0 100%)" }}
             >
               <Icon name="Crown" size={16} />
@@ -150,7 +150,7 @@ export default function HeroSection() {
                 { value: "3", label: "Года на площадках" },
               ].map((s) => (
                 <div key={s.label} className="border border-yellow-400/20 p-4 text-center" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
-                  <div className="text-yellow-400 font-black text-xl mb-1" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.6rem" }}>
+                  <div className="text-yellow-400 font-light mb-1" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.6rem", letterSpacing: "0.05em" }}>
                     {s.value}
                   </div>
                   <div className="text-white/50 text-xs tracking-widest uppercase">{s.label}</div>
