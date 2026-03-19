@@ -66,7 +66,7 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({ desktopImage, mobil
                 <div className="w-9 h-9 bg-yellow-400/10 flex items-center justify-center mx-auto mb-3">
                   <s.icon className="w-4 h-4 text-yellow-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-light text-white mb-1" style={{ fontFamily: "'Cormorant Garamond', serif", letterSpacing: "0.05em" }}>
+                <div className="text-2xl md:text-3xl font-extralight text-white mb-1" style={{ fontFamily: "'Cormorant Garamond', serif", letterSpacing: "0.08em" }}>
                   {s.value}
                 </div>
                 <div className="text-xs text-white/40 tracking-widest uppercase">{s.label}</div>
@@ -75,7 +75,7 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({ desktopImage, mobil
           </div>
 
           {/* CTA Button */}
-          <LiquidButton size="xxl" className="font-medium text-lg tracking-wide px-12 py-4">
+          <LiquidButton size="xxl" className="font-light text-lg tracking-widest px-12 py-4">
             ОБСУДИТЬ СОТРУДНИЧЕСТВО
           </LiquidButton>
 
