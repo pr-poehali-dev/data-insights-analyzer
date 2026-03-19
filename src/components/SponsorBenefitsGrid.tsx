@@ -74,7 +74,7 @@ export default function SponsorBenefitsGrid() {
           <p className="text-yellow-500 text-sm font-semibold tracking-[0.3em] uppercase mb-4">
             Что вы получаете
           </p>
-          <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-6xl font-light tracking-wider text-gray-900 mb-6">
             ПРЕИМУЩЕСТВА{" "}
             <span className="bg-gradient-to-r from-yellow-500 to-yellow-300 bg-clip-text text-transparent">
               СПОНСОРА
@@ -146,7 +146,7 @@ export default function SponsorBenefitsGrid() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-black text-gray-900 mb-2 tracking-wide leading-tight">
+                  <h3 className="text-lg font-medium text-gray-900 mb-2 tracking-wide leading-tight">
                     {benefit.title}
                   </h3>
 

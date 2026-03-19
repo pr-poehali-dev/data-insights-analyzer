@@ -63,7 +63,7 @@ export default function EventLocation() {
           <p className="text-yellow-400 text-sm font-semibold tracking-[0.3em] uppercase mb-4">
             Место проведения
           </p>
-          <h2 className="text-4xl md:text-6xl font-black tracking-wider text-white mb-4">
+          <h2 className="text-4xl md:text-6xl font-light tracking-wider text-white mb-4">
             ГДЕ{" "}
             <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">
               ПРОЙДЁТ КОНКУРС
@@ -96,10 +96,10 @@ export default function EventLocation() {
                       <div className="w-8 h-8 bg-yellow-400/20 flex items-center justify-center">
                         <Icon name="Building2" size={16} className="text-yellow-400" />
                       </div>
-                      <span className="text-yellow-400 text-xs font-bold tracking-widest uppercase">Площадка</span>
+                      <span className="text-yellow-400 text-xs font-medium tracking-widest uppercase">Площадка</span>
                     </div>
 
-                    <h3 className="text-3xl md:text-4xl font-black text-white mb-3 leading-tight">
+                    <h3 className="text-3xl md:text-4xl font-light text-white mb-3 leading-tight">
                       {location.name}
                     </h3>
 
@@ -118,7 +118,7 @@ export default function EventLocation() {
                         href={mapsUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 px-6 py-3 font-bold text-sm tracking-wide hover:bg-yellow-300 transition-colors duration-200"
+                        className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 px-6 py-3 font-medium text-sm tracking-wide hover:bg-yellow-300 transition-colors duration-200"
                         style={{ clipPath: "polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0 100%)" }}
                       >
                         <Icon name="Navigation" size={15} />
@@ -155,7 +155,7 @@ export default function EventLocation() {
                         <div className="w-9 h-9 bg-yellow-400/10 flex items-center justify-center mb-3">
                           <Icon name={stat.icon} size={16} className="text-yellow-400" />
                         </div>
-                        <div className="text-xl font-black text-white mb-1">{stat.value}</div>
+                        <div className="text-xl font-light text-white mb-1" style={{ letterSpacing: "0.05em" }}>{stat.value}</div>
                         <div className="text-xs text-gray-500 font-medium">{stat.label}</div>
                       </motion.div>
                     ))}
