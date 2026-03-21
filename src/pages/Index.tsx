@@ -32,7 +32,7 @@ export default function Index() {
     },
     {
       id: 3,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1FdGyjVpWQANGzsDWpoPIvF5SVI2za.png",
+      image: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/726183e4-eacb-4dce-b83d-6e841f0047a6.jpg",
       alt: "Спонсорские пакеты",
       title: "Три уровня партнёрства",
       description:
