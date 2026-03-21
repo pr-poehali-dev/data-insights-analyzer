@@ -40,7 +40,6 @@ export default function EventLocation() {
   const stats = location ? [
     { icon: "Users", label: "Вместимость", value: `${location.capacity.toLocaleString("ru")}+` },
     { icon: "Maximize2", label: "Площадь", value: `${location.area_sqm.toLocaleString("ru")} м²` },
-    { icon: "Car", label: "Парковка", value: location.parking ? `${location.parking_spaces} мест` : "Нет" },
     { icon: "MapPin", label: "Ориентир", value: location.landmark },
   ] : []
 
