@@ -23,7 +23,7 @@ export default function Index() {
     },
     {
       id: 2,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LN9OPh9hw0b9rwSPRSslHoejcfoKHe.png",
+      image: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/940a674c-2c44-4dbc-8866-03f3b4f4d276.jpg",
       alt: "Медийное покрытие",
       title: "Медийное присутствие вашего бренда",
       description:
