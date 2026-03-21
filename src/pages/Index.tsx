@@ -133,8 +133,6 @@ export default function Index() {
               <ul className="space-y-3 text-sm text-gray-600">
                 <li className="flex items-start gap-2"><span className="text-amber-600 mt-0.5">✦</span> Логотип на афише и баннерах</li>
                 <li className="flex items-start gap-2"><span className="text-amber-600 mt-0.5">✦</span> Упоминание на мероприятии</li>
-                <li className="flex items-start gap-2"><span className="text-amber-600 mt-0.5">✦</span> 2 VIP-билета на шоу</li>
-                <li className="flex items-start gap-2"><span className="text-amber-600 mt-0.5">✦</span> Пост в соцсетях (1 публикация)</li>
               </ul>
             </motion.div>
 
@@ -153,9 +151,6 @@ export default function Index() {
               <ul className="space-y-3 text-sm text-gray-600">
                 <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Всё из пакета Стандарт</li>
                 <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Брендированная зона на площадке</li>
-                <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> 5 VIP-билетов на шоу</li>
-                <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> 3 поста в соцсетях + сторис</li>
-                <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Интеграция в трансляцию</li>
               </ul>
             </motion.div>
 
@@ -178,7 +173,6 @@ export default function Index() {
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Всё из пакета Платинум</li>
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Именная номинация от бренда</li>
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Эксклюзивное брендирование сцены</li>
-                <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> 10 VIP-билетов + фуршет</li>
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Видеоролик о бренде на шоу</li>
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Пресс-волл с логотипом спонсора</li>
               </ul>
