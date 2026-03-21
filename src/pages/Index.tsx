@@ -133,6 +133,9 @@ export default function Index() {
               <ul className="space-y-3 text-sm text-gray-600">
                 <li className="flex items-start gap-2"><span className="text-amber-600 mt-0.5">✦</span> Логотип на афише и баннерах</li>
                 <li className="flex items-start gap-2"><span className="text-amber-600 mt-0.5">✦</span> Упоминание на мероприятии</li>
+                <li className="flex items-start gap-2"><span className="text-amber-600 mt-0.5">✦</span> Публикации в соцсетях мероприятия</li>
+                <li className="flex items-start gap-2"><span className="text-amber-600 mt-0.5">✦</span> Упоминание в пресс-релизах</li>
+                <li className="flex items-start gap-2"><span className="text-amber-600 mt-0.5">✦</span> Приглашение на фуршет</li>
               </ul>
             </motion.div>
 
@@ -151,6 +154,9 @@ export default function Index() {
               <ul className="space-y-3 text-sm text-gray-600">
                 <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Всё из пакета Стандарт</li>
                 <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Брендированная зона на площадке</li>
+                <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Расширенные публикации в соцсетях</li>
+                <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Упоминание в пресс-релизах и СМИ</li>
+                <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Приглашение на фуршет</li>
               </ul>
             </motion.div>
 
@@ -175,6 +181,7 @@ export default function Index() {
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Эксклюзивное брендирование сцены</li>
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Видеоролик о бренде на шоу</li>
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Пресс-волл с логотипом спонсора</li>
+                <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Приглашение на фуршет</li>
               </ul>
             </motion.div>
           </div>
