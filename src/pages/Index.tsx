@@ -14,7 +14,7 @@ export default function Index() {
   const timelineEntries = [
     {
       id: 1,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RJ3iTXUn5SUexF6nHMZYhMoQLNCboK.png",
+      image: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/d3f66735-3569-4ebc-adc9-57cfd9c503a1.jpg",
       alt: "Аудитория мероприятия",
       title: "Кто приходит на «Саранскую красавицу»",
       description:
