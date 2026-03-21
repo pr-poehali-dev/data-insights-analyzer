@@ -23,6 +23,10 @@ const photos = [
     url: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/1d00ba6e-e700-4808-8a1f-8223e99ece96.jpg",
     alt: "Живая музыка на мероприятии",
   },
+  {
+    url: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/5f4838eb-41b3-40b4-8ae1-aa1401ff4560.jpg",
+    alt: "Гости на фотозоне",
+  },
 ]
 
 export default function PhotoGallery() {
