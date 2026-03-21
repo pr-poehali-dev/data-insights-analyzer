@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
 import Icon from "@/components/ui/icon"
 
 const photos = [
@@ -38,13 +37,7 @@ export default function PhotoGallery() {
   return (
     <section className="relative py-20 bg-white">
       <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <p className="text-yellow-500 text-sm font-semibold tracking-[0.3em] uppercase mb-4">Атмосфера</p>
           <h2 className="text-4xl md:text-6xl font-light tracking-wider text-gray-900">
             ЖИВЫЕ{" "}
@@ -52,16 +45,12 @@ export default function PhotoGallery() {
               КАДРЫ
             </span>
           </h2>
-        </motion.div>
+        </div>
 
         {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-5xl mx-auto">
           {/* Большое фото */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.97 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
             className="col-span-2 md:col-span-2 row-span-2 cursor-pointer overflow-hidden group relative"
             style={{ clipPath: "polygon(16px 0%, 100% 0%, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px)" }}
             onClick={() => setLightbox(0)}
@@ -74,16 +63,12 @@ export default function PhotoGallery() {
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
               <Icon name="ZoomIn" size={32} className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-          </motion.div>
+          </div>
 
           {/* Маленькие фото */}
           {photos.slice(1).map((photo, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, scale: 0.97 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: (i + 1) * 0.08 }}
-              viewport={{ once: true }}
               className="cursor-pointer overflow-hidden group relative"
               style={{ clipPath: "polygon(12px 0%, 100% 0%, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px)" }}
               onClick={() => setLightbox(i + 1)}
@@ -96,62 +81,52 @@ export default function PhotoGallery() {
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                 <Icon name="ZoomIn" size={24} className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
 
       {/* Lightbox */}
-      <AnimatePresence>
-        {lightbox !== null && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+      {lightbox !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white/70 hover:text-white"
             onClick={() => setLightbox(null)}
           >
-            <button
-              className="absolute top-4 right-4 text-white/70 hover:text-white"
-              onClick={() => setLightbox(null)}
-            >
-              <Icon name="X" size={32} />
-            </button>
-            <button
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white"
-              onClick={(e) => { e.stopPropagation(); prev() }}
-            >
-              <Icon name="ChevronLeft" size={40} />
-            </button>
-            <motion.img
-              key={lightbox}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              src={photos[lightbox].url}
-              alt={photos[lightbox].alt}
-              className="max-h-[90vh] max-w-[90vw] object-contain"
-              onClick={(e) => e.stopPropagation()}
-            />
-            <button
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white"
-              onClick={(e) => { e.stopPropagation(); next() }}
-            >
-              <Icon name="ChevronRight" size={40} />
-            </button>
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-              {photos.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={(e) => { e.stopPropagation(); setLightbox(i) }}
-                  className={`w-2 h-2 rounded-full transition-colors ${i === lightbox ? "bg-yellow-400" : "bg-white/40"}`}
-                />
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <Icon name="X" size={32} />
+          </button>
+          <button
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white"
+            onClick={(e) => { e.stopPropagation(); prev() }}
+          >
+            <Icon name="ChevronLeft" size={40} />
+          </button>
+          <img
+            src={photos[lightbox].url}
+            alt={photos[lightbox].alt}
+            className="max-h-[90vh] max-w-[90vw] object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <button
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white"
+            onClick={(e) => { e.stopPropagation(); next() }}
+          >
+            <Icon name="ChevronRight" size={40} />
+          </button>
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            {photos.map((_, i) => (
+              <button
+                key={i}
+                onClick={(e) => { e.stopPropagation(); setLightbox(i) }}
+                className={`w-2 h-2 rounded-full transition-colors ${i === lightbox ? "bg-yellow-400" : "bg-white/40"}`}
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   )
 }

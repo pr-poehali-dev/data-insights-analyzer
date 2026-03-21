@@ -1,4 +1,3 @@
-import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import Icon from "@/components/ui/icon"
@@ -40,24 +39,14 @@ export default function HeroSection() {
 
       {/* Navigation */}
       <nav className="relative z-20 flex items-center justify-between px-8 py-6">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex items-center gap-2 text-white"
-        >
+        <div className="flex items-center gap-2 text-white">
           <span className="text-yellow-400 text-lg">✦</span>
           <span className="font-semibold text-sm tracking-[0.2em] uppercase" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.1rem" }}>
             Саранская красавица
           </span>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="hidden md:flex items-center gap-8"
-        >
+        <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <button
               key={item.name}
@@ -68,7 +57,7 @@ export default function HeroSection() {
               <span className="absolute bottom-0 left-0 w-0 h-px bg-yellow-400 transition-all duration-300 group-hover:w-full" />
             </button>
           ))}
-        </motion.div>
+        </div>
 
         <button className="md:hidden text-white z-40 relative" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -78,18 +67,15 @@ export default function HeroSection() {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="absolute inset-0 z-30 md:hidden flex flex-col items-center justify-center" style={{ backgroundColor: "rgba(10,26,13,0.97)" }}>
-          {navItems.map((item, i) => (
-            <motion.button
+          {navItems.map((item) => (
+            <button
               key={item.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
               onClick={() => scrollToSection(item.href)}
               className="text-white text-2xl mb-8 tracking-wider hover:text-yellow-300 transition-colors"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               {item.name}
-            </motion.button>
+            </button>
           ))}
         </div>
       )}
@@ -99,11 +85,7 @@ export default function HeroSection() {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-end">
 
           {/* Left — main title */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          >
+          <div>
             <p className="text-yellow-400 text-xs font-semibold tracking-[0.35em] uppercase mb-5">
               Коммерческое предложение · 2026
             </p>
@@ -130,15 +112,10 @@ export default function HeroSection() {
               <Icon name="Crown" size={16} />
               Стать спонсором
             </button>
-          </motion.div>
+          </div>
 
           {/* Right — stats + description */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="md:text-right"
-          >
+          <div className="md:text-right">
             <p className="text-white/70 text-base leading-relaxed mb-8 max-w-md md:ml-auto">
               Станьте частью главного культурного события Саранска. Прямой контакт с тысячами жителей города и уникальные возможности для продвижения вашего бренда.
             </p>
@@ -157,7 +134,7 @@ export default function HeroSection() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

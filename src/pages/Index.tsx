@@ -2,7 +2,6 @@ import HeroSection from "@/components/HeroSection"
 import { TextGradientScroll } from "@/components/ui/text-gradient-scroll"
 import { Timeline } from "@/components/ui/timeline"
 import { StaggerTestimonials } from "@/components/ui/stagger-testimonials"
-import { motion } from "framer-motion"
 import SmoothScrollHero from "@/components/ui/smooth-scroll-hero"
 import SponsorBenefitsGrid from "@/components/SponsorBenefitsGrid"
 import EventLocation from "@/components/EventLocation"
@@ -123,11 +122,7 @@ export default function Index() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Bronze */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+            <div
               className="bg-white border-2 border-amber-700/30 p-8 rounded-none relative"
               style={{ clipPath: "polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)" }}
             >
@@ -141,14 +136,10 @@ export default function Index() {
                 <li className="flex items-start gap-2"><span className="text-amber-600 mt-0.5">✦</span> Упоминание в пресс-релизах</li>
                 <li className="flex items-start gap-2"><span className="text-amber-600 mt-0.5">✦</span> Приглашение на фуршет</li>
               </ul>
-            </motion.div>
+            </div>
 
             {/* Silver */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+            <div
               className="bg-white border-2 border-gray-400/50 p-8 rounded-none relative"
               style={{ clipPath: "polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)" }}
             >
@@ -162,14 +153,10 @@ export default function Index() {
                 <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Упоминание в пресс-релизах и СМИ</li>
                 <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Приглашение на фуршет</li>
               </ul>
-            </motion.div>
+            </div>
 
             {/* Gold */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
+            <div
               className="border-2 border-yellow-400 p-8 rounded-none relative text-white"
               style={{ backgroundColor: "#0f1f14", clipPath: "polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)" }}
             >
@@ -187,7 +174,7 @@ export default function Index() {
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Пресс-волл с логотипом спонсора</li>
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Приглашение на фуршет</li>
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -200,13 +187,7 @@ export default function Index() {
         <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none" />
 
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+          <div className="text-center mb-16">
             <p className="text-yellow-500 text-sm font-semibold tracking-[0.3em] uppercase mb-4">Обратная связь</p>
             <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900 mb-6">
               Что говорят наши{" "}
@@ -217,7 +198,7 @@ export default function Index() {
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
               Реальные отзывы спонсоров и участниц предыдущих конкурсов.
             </p>
-          </motion.div>
+          </div>
 
           <StaggerTestimonials />
         </div>

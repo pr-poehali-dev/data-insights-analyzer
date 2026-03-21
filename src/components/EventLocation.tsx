@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
 import Icon from "@/components/ui/icon"
 
 interface Location {
@@ -52,13 +51,7 @@ export default function EventLocation() {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <p className="text-yellow-400 text-sm font-semibold tracking-[0.3em] uppercase mb-4">
             Место проведения
           </p>
@@ -68,18 +61,12 @@ export default function EventLocation() {
               ПРОЙДЁТ КОНКУРС
             </span>
           </h2>
-        </motion.div>
+        </div>
 
         {loading ? (
           <div className="max-w-5xl mx-auto h-80 bg-white/5 animate-pulse" />
         ) : location ? (
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            viewport={{ once: true }}
-            className="max-w-5xl mx-auto"
-          >
+          <div className="max-w-5xl mx-auto">
             {/* Main card */}
             <div className="border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden"
               style={{ clipPath: "polygon(24px 0%, 100% 0%, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%, 0 24px)" }}
@@ -141,13 +128,9 @@ export default function EventLocation() {
 
                   {/* Right: Stats */}
                   <div className="grid grid-cols-2 gap-4">
-                    {stats.map((stat, i) => (
-                      <motion.div
+                    {stats.map((stat) => (
+                      <div
                         key={stat.label}
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.4, delay: i * 0.08 }}
-                        viewport={{ once: true }}
                         className="bg-white/5 border border-white/10 p-5"
                         style={{ clipPath: "polygon(12px 0%, 100% 0%, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px)" }}
                       >
@@ -156,7 +139,7 @@ export default function EventLocation() {
                         </div>
                         <div className="text-xl font-light text-white mb-1" style={{ letterSpacing: "0.05em" }}>{stat.value}</div>
                         <div className="text-xs text-gray-500 font-medium">{stat.label}</div>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -164,16 +147,10 @@ export default function EventLocation() {
             </div>
 
             {/* Bottom hint */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center text-gray-600 text-xs mt-6 tracking-wide"
-            >
+            <p className="text-center text-gray-600 text-xs mt-6 tracking-wide">
               {location.region} · Точная дата будет объявлена дополнительно
-            </motion.p>
-          </motion.div>
+            </p>
+          </div>
         ) : null}
       </div>
     </section>

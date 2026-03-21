@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
 import Icon from "@/components/ui/icon"
 
 interface Benefit {
@@ -64,13 +63,7 @@ export default function SponsorBenefitsGrid() {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          viewport={{ once: true }}
-          className="text-center mb-14"
-        >
+        <div className="text-center mb-14">
           <p className="text-yellow-500 text-sm font-semibold tracking-[0.3em] uppercase mb-4">
             Что вы получаете
           </p>
@@ -83,16 +76,10 @@ export default function SponsorBenefitsGrid() {
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
             Брендирование, PR и медийное присутствие — всё в одном партнёрстве
           </p>
-        </motion.div>
+        </div>
 
         {/* Filter Tabs */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
-        >
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((cat) => {
             const colors = CATEGORY_COLORS[cat]
             const isActive = activeCategory === cat
@@ -113,7 +100,7 @@ export default function SponsorBenefitsGrid() {
               </button>
             )
           })}
-        </motion.div>
+        </div>
 
         {/* Grid */}
         {loading ? (
@@ -124,16 +111,12 @@ export default function SponsorBenefitsGrid() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filtered.map((benefit, i) => {
+            {filtered.map((benefit) => {
               const colors = CATEGORY_COLORS[benefit.category] || CATEGORY_COLORS.branding
               const badge = PACKAGE_BADGE[benefit.package_level] || PACKAGE_BADGE.all
               return (
-                <motion.div
+                <div
                   key={benefit.id}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                  viewport={{ once: true }}
                   className="group bg-white border-2 border-gray-100 p-7 hover:border-gray-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
                   style={{ clipPath: "polygon(16px 0%, 100% 0%, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px)" }}
                 >
@@ -164,20 +147,14 @@ export default function SponsorBenefitsGrid() {
                       {badge.label}
                     </span>
                   </div>
-                </motion.div>
+                </div>
               )
             })}
           </div>
         )}
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
+        <div className="text-center mt-16">
           <p className="text-gray-400 text-sm mb-4">
             Полный набор преимуществ зависит от выбранного пакета спонсорства
           </p>
@@ -189,7 +166,7 @@ export default function SponsorBenefitsGrid() {
             <Icon name="Crown" size={16} />
             ОБСУДИТЬ ПАКЕТ
           </button>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
