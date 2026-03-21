@@ -30,9 +30,9 @@ const CATEGORY_COLORS: Record<string, { bg: string; text: string; border: string
 
 const PACKAGE_BADGE: Record<string, { label: string; style: string }> = {
   all:    { label: "Все пакеты",  style: "bg-gray-100 text-gray-600" },
-  bronze: { label: "Бронзовый+", style: "bg-amber-100 text-amber-700" },
-  silver: { label: "Серебряный+", style: "bg-gray-200 text-gray-600" },
-  gold:   { label: "Золотой",    style: "bg-yellow-100 text-yellow-700" },
+  bronze: { label: "Стандарт+", style: "bg-amber-100 text-amber-700" },
+  silver: { label: "Платинум+", style: "bg-gray-200 text-gray-600" },
+  gold:   { label: "Премиум",   style: "bg-yellow-100 text-yellow-700" },
 }
 
 const CATEGORIES_ORDER = ["branding", "pr", "media", "digital", "vip"]

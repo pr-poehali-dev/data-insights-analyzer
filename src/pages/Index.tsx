@@ -36,7 +36,7 @@ export default function Index() {
       alt: "Спонсорские пакеты",
       title: "Три уровня партнёрства",
       description:
-        "Мы предлагаем гибкие спонсорские пакеты: Золотой (генеральный спонсор), Серебряный (официальный партнёр) и Бронзовый (партнёр мероприятия). Каждый пакет включает уникальный набор возможностей — от эксклюзивного брендирования до именных номинаций и VIP-присутствия на мероприятии.",
+        "Мы предлагаем гибкие спонсорские пакеты: Премиум (генеральный спонсор), Платинум (официальный партнёр) и Стандарт (партнёр мероприятия). Каждый пакет включает уникальный набор возможностей — от эксклюзивного брендирования до именных номинаций и VIP-присутствия на мероприятии.",
       layout: "left" as const,
     },
   ]
@@ -127,7 +127,7 @@ export default function Index() {
               className="bg-white border-2 border-amber-700/30 p-8 rounded-none relative"
               style={{ clipPath: "polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)" }}
             >
-              <div className="text-amber-700 text-xs font-medium tracking-[0.3em] uppercase mb-2">Бронзовый</div>
+              <div className="text-amber-700 text-xs font-medium tracking-[0.3em] uppercase mb-2">Стандарт</div>
               <div className="text-3xl font-light text-gray-900 mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>от 30 000 ₽</div>
               <div className="text-gray-400 text-sm mb-6">Партнёр мероприятия</div>
               <ul className="space-y-3 text-sm text-gray-600">
@@ -147,11 +147,11 @@ export default function Index() {
               className="bg-white border-2 border-gray-400/50 p-8 rounded-none relative"
               style={{ clipPath: "polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)" }}
             >
-              <div className="text-gray-500 text-xs font-medium tracking-[0.3em] uppercase mb-2">Серебряный</div>
+              <div className="text-gray-500 text-xs font-medium tracking-[0.3em] uppercase mb-2">Платинум</div>
               <div className="text-3xl font-light text-gray-900 mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>от 80 000 ₽</div>
               <div className="text-gray-400 text-sm mb-6">Официальный партнёр</div>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Всё из бронзового пакета</li>
+                <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Всё из пакета Стандарт</li>
                 <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Брендированная зона на площадке</li>
                 <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> 5 VIP-билетов на шоу</li>
                 <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> 3 поста в соцсетях + сторис</li>
@@ -171,11 +171,11 @@ export default function Index() {
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-900 text-xs font-medium px-4 py-1 tracking-wider">
                 ТОП ВЫБОР
               </div>
-              <div className="text-yellow-400 text-xs font-medium tracking-[0.3em] uppercase mb-2">Золотой</div>
+              <div className="text-yellow-400 text-xs font-medium tracking-[0.3em] uppercase mb-2">Премиум</div>
               <div className="text-3xl font-light text-white mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>от 200 000 ₽</div>
               <div className="text-gray-400 text-sm mb-6">Генеральный спонсор</div>
               <ul className="space-y-3 text-sm text-gray-300">
-                <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Всё из серебряного пакета</li>
+                <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Всё из пакета Платинум</li>
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Именная номинация от бренда</li>
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Эксклюзивное брендирование сцены</li>
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> 10 VIP-билетов + фуршет</li>
