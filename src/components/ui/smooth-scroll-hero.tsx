@@ -58,7 +58,7 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({ desktopImage, mobil
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {[
               { icon: Users, value: "3 000+", label: "Зрителей на шоу" },
-              { icon: MapPin, value: "50 000+", label: "Охват онлайн" },
+              { icon: MapPin, value: "100 000+", label: "Охват онлайн" },
               { icon: Calendar, value: "2026", label: "Год проведения" },
               { icon: Trophy, value: "3", label: "Лет мероприятию" },
             ].map((s) => (
