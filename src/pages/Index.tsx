@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import SmoothScrollHero from "@/components/ui/smooth-scroll-hero"
 import SponsorBenefitsGrid from "@/components/SponsorBenefitsGrid"
 import EventLocation from "@/components/EventLocation"
+import PhotoGallery from "@/components/PhotoGallery"
 
 export default function Index() {
   const missionStatement =
@@ -106,6 +107,9 @@ export default function Index() {
 
       {/* Event Location */}
       <EventLocation />
+
+      {/* Photo Gallery */}
+      <PhotoGallery />
 
       {/* Sponsorship Packages Section */}
       <section className="relative py-20 bg-gray-50">
