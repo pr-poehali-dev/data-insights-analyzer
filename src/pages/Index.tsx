@@ -128,7 +128,7 @@ export default function Index() {
               style={{ clipPath: "polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)" }}
             >
               <div className="text-amber-700 text-xs font-medium tracking-[0.3em] uppercase mb-2">Стандарт</div>
-              <div className="text-3xl font-light text-gray-900 mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>от 30 000 ₽</div>
+              <div className="text-3xl font-light text-gray-900 mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>от 100 000 ₽</div>
               <div className="text-gray-400 text-sm mb-6">Партнёр мероприятия</div>
               <ul className="space-y-3 text-sm text-gray-600">
                 <li className="flex items-start gap-2"><span className="text-amber-600 mt-0.5">✦</span> Логотип на афише и баннерах</li>
@@ -148,7 +148,7 @@ export default function Index() {
               style={{ clipPath: "polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)" }}
             >
               <div className="text-gray-500 text-xs font-medium tracking-[0.3em] uppercase mb-2">Платинум</div>
-              <div className="text-3xl font-light text-gray-900 mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>от 80 000 ₽</div>
+              <div className="text-3xl font-light text-gray-900 mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>от 200 000 ₽</div>
               <div className="text-gray-400 text-sm mb-6">Официальный партнёр</div>
               <ul className="space-y-3 text-sm text-gray-600">
                 <li className="flex items-start gap-2"><span className="text-gray-500 mt-0.5">✦</span> Всё из пакета Стандарт</li>
@@ -172,7 +172,7 @@ export default function Index() {
                 ТОП ВЫБОР
               </div>
               <div className="text-yellow-400 text-xs font-medium tracking-[0.3em] uppercase mb-2">Премиум</div>
-              <div className="text-3xl font-light text-white mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>от 200 000 ₽</div>
+              <div className="text-3xl font-light text-white mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>от 300 000 ₽</div>
               <div className="text-gray-400 text-sm mb-6">Генеральный спонсор</div>
               <ul className="space-y-3 text-sm text-gray-300">
                 <li className="flex items-start gap-2"><span className="text-yellow-400 mt-0.5">✦</span> Всё из пакета Платинум</li>
