@@ -13,7 +13,7 @@ const testimonials = [
     by: "Луконин Н.А., ресто-клуб «Культ»",
     imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/a21376a9-61ad-41eb-89a1-20e21ce158db.jpg",
     imgObjectPosition: "50% 50%",
-    imgScale: "scale(1.8)",
+    imgScale: "scale(2.8)",
   },
   {
     tempId: 1,
@@ -21,8 +21,8 @@ const testimonials = [
       "Партнёрство с «Саранской красавицей» дало нам прямой выход на целевую аудиторию — владельцев автомобилей, которые ценят качество. Публикации с нашим брендом охватили тысячи подписчиков. Отличная инвестиция в репутацию студии.",
     by: "Ульянов А.В., детейлинг-студия Toner 13/58 Pro",
     imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/4dd29801-71a9-416b-a495-712d644248ac.jpg",
-    imgObjectPosition: "50% 45%",
-    imgScale: "scale(1.6)",
+    imgObjectPosition: "50% 48%",
+    imgScale: "scale(2.4)",
   },
   {
     tempId: 2,
@@ -39,8 +39,8 @@ const testimonials = [
       "Неожиданно для себя нашли здесь именно ту аудиторию — активные семьи, владельцы загородных домов. Узнаваемость НЕВА выросла заметно. Организаторы — профессионалы, всё чётко и в срок. Однозначно рекомендуем.",
     by: "Щербаков К.В., НЕВА Септик-Сервис",
     imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/e4d8d180-b1b5-488e-8322-aa8b3b3e0152.jpg",
-    imgObjectPosition: "50% 35%",
-    imgScale: "scale(1.1)",
+    imgObjectPosition: "50% 30%",
+    imgScale: "scale(0.75)",
   },
 ]
 
