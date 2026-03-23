@@ -18,7 +18,7 @@ const testimonials = [
     testimonial:
       "Партнёрство с «Саранской красавицей» дало нам прямой выход на целевую аудиторию — владельцев автомобилей, которые ценят качество. Публикации с нашим брендом охватили тысячи подписчиков. Отличная инвестиция в репутацию студии.",
     by: "Ульянов А.В.",
-    company: "Toner 13/58 Pro",
+    company: "Toner Pro",
     imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/4dd29801-71a9-416b-a495-712d644248ac.jpg",
     imgObjectPosition: "50% 42%",
     imgScale: "scale(2.4)",
