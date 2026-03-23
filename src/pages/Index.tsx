@@ -160,9 +160,6 @@ export default function Index() {
               className="border-2 border-yellow-400 p-8 rounded-none relative text-white"
               style={{ backgroundColor: "#0f1f14", clipPath: "polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)" }}
             >
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-900 text-xs font-medium px-4 py-1 tracking-wider">
-                ТОП ВЫБОР
-              </div>
               <div className="text-yellow-400 text-xs font-medium tracking-[0.3em] uppercase mb-2">Премиум</div>
               <div className="text-3xl font-light text-white mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>от 300 000 ₽</div>
               <div className="text-gray-400 text-sm mb-6">Генеральный спонсор</div>
