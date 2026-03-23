@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon"
 
 const photos = [
   {
-    url: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/78787b25-4bfa-47a0-83be-7fd2d3c227fc.jpg",
+    url: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/d49d45aa-4534-4555-b72f-a1953e7b76fb.jpg",
     alt: "Участницы конкурса на сцене",
   },
   {
