@@ -16,13 +16,13 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({ desktopImage, mobil
       {/* Gold top border */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent" />
 
-      {/* Subtle background image with dark overlay */}
+      {/* Background image with dark overlay */}
       <div
-        className="absolute inset-0 hidden md:block opacity-10"
+        className="absolute inset-0 hidden md:block opacity-30"
         style={{ backgroundImage: `url(${desktopImage})`, backgroundSize: "cover", backgroundPosition: "center" }}
       />
       <div
-        className="absolute inset-0 md:hidden opacity-10"
+        className="absolute inset-0 md:hidden opacity-30"
         style={{ backgroundImage: `url(${mobileImage})`, backgroundSize: "cover", backgroundPosition: "center" }}
       />
 

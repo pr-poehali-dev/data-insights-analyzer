@@ -204,8 +204,8 @@ export default function Index() {
       {/* Final CTA Section */}
       <section id="join" className="relative">
         <SmoothScrollHero
-          desktopImage="https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/files/50ceae66-928a-4fec-83f8-76cf2518d489.jpg"
-          mobileImage="https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/files/50ceae66-928a-4fec-83f8-76cf2518d489.jpg"
+          desktopImage="https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/files/265abc39-520d-44cb-8268-e56fdf815d52.jpg"
+          mobileImage="https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/files/265abc39-520d-44cb-8268-e56fdf815d52.jpg"
         />
       </section>
     </div>
