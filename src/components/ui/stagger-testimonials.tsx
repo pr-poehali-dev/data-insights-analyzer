@@ -11,7 +11,7 @@ const testimonials = [
     testimonial:
       "Спонсорство «Саранской красавицы» стало для нас настоящим открытием. Наши гости узнавали логотип Культ на всех площадках мероприятия — атмосфера шоу идеально совпала с духом нашего заведения. Уже готовимся к следующему году.",
     by: "Луконин Н.А., ресто-клуб «Культ»",
-    imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/f92f283e-1c25-4233-971d-a43abb133a22.jpg",
+    imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/a21376a9-61ad-41eb-89a1-20e21ce158db.jpg",
     imgObjectPosition: "50% 50%",
     imgScale: "scale(1.8)",
   },
@@ -20,8 +20,8 @@ const testimonials = [
     testimonial:
       "Партнёрство с «Саранской красавицей» дало нам прямой выход на целевую аудиторию — владельцев автомобилей, которые ценят качество. Публикации с нашим брендом охватили тысячи подписчиков. Отличная инвестиция в репутацию студии.",
     by: "Ульянов А.В., детейлинг-студия Toner 13/58 Pro",
-    imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/d442d7e6-55f3-47f8-b903-9b4315ad9a91.jpg",
-    imgObjectPosition: "50% 50%",
+    imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/4dd29801-71a9-416b-a495-712d644248ac.jpg",
+    imgObjectPosition: "50% 45%",
     imgScale: "scale(1.6)",
   },
   {
@@ -29,16 +29,16 @@ const testimonials = [
     testimonial:
       "Конкурс красоты — это именно та среда, где наш бренд говорит сам за себя. Мы получили живые отзывы, новых клиентов и мощный охват в соцсетях. Каждая участница и зрительница — наша потенциальная гостья.",
     by: "Лукина А.М., AL. Alena Lukina — наращивание волос",
-    imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/3b22dbc2-0bd6-42d3-a8c7-8fec00a5b7e0.jpg",
-    imgObjectPosition: "50% 55%",
-    imgScale: "scale(1.5)",
+    imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/8da12843-74b7-43e3-953f-0d86510e2875.jpg",
+    imgObjectPosition: "50% 50%",
+    imgScale: "scale(1.7)",
   },
   {
     tempId: 3,
     testimonial:
       "Неожиданно для себя нашли здесь именно ту аудиторию — активные семьи, владельцы загородных домов. Узнаваемость НЕВА выросла заметно. Организаторы — профессионалы, всё чётко и в срок. Однозначно рекомендуем.",
     by: "Щербаков К.В., НЕВА Септик-Сервис",
-    imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/5c192c18-efda-4ab7-9af3-9e98ae21893a.jpg",
+    imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/e4d8d180-b1b5-488e-8322-aa8b3b3e0152.jpg",
     imgObjectPosition: "50% 35%",
     imgScale: "scale(1.1)",
   },
