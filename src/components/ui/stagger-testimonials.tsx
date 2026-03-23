@@ -9,7 +9,7 @@ const testimonials = [
     company: "Ресто-клуб «Культ»",
     imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/a21376a9-61ad-41eb-89a1-20e21ce158db.jpg",
     imgObjectPosition: "50% 42%",
-    imgScale: "scale(2.8)",
+    imgScale: "scale(2.2)",
     rotate: "-3deg",
     translateY: "0px",
   },
