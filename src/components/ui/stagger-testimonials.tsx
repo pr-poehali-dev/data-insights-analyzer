@@ -5,91 +5,34 @@ import { cn } from "@/lib/utils"
 
 const SQRT_5000 = Math.sqrt(5000)
 
-// Testimonials from sponsors and participants of «Саранская красавица»
 const testimonials = [
   {
     tempId: 0,
     testimonial:
-      "Наш бренд впервые стал партнёром «Саранской красавицы» — и это лучшее маркетинговое решение года. Живой контакт с аудиторией, охват в соцсетях и искренние эмоции зрителей — это не купишь за деньги.",
-    by: "Алексей Романов, директор по маркетингу, ТЦ «Меридиан»",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AlexeyRomanov&backgroundColor=b45309&textColor=ffffff",
+      "Спонсорство «Саранской красавицы» стало для нас настоящим открытием. Наши гости узнавали логотип Культ на всех площадках мероприятия — атмосфера шоу идеально совпала с духом нашего заведения. Уже готовимся к следующему году.",
+    by: "Луконин Н.А., ресто-клуб «Культ»",
+    imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/f92f283e-1c25-4233-971d-a43abb133a22.jpg",
   },
   {
     tempId: 1,
     testimonial:
-      "Участие в конкурсе изменило мою жизнь. Я обрела уверенность, нашла потрясающих подруг и получила предложение о работе. «Саранская красавица» — это трамплин для каждой девушки.",
-    by: "Алина Кузнецова, победительница 2024 года",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AlinaKuznetsova&backgroundColor=db2777&textColor=ffffff",
+      "Партнёрство с «Саранской красавицей» дало нам прямой выход на целевую аудиторию — владельцев автомобилей, которые ценят качество. Публикации с нашим брендом охватили тысячи подписчиков. Отличная инвестиция в репутацию студии.",
+    by: "Ульянов А.В., детейлинг-студия Toner 13/58 Pro",
+    imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/d442d7e6-55f3-47f8-b903-9b4315ad9a91.jpg",
   },
   {
     tempId: 2,
     testimonial:
-      "Мероприятие собрало весь цвет Саранска — от молодёжи до уважаемых горожан. Наш стенд посетили сотни человек, и мы получили в три раза больше лидов, чем на обычной выставке.",
-    by: "Ирина Власова, руководитель, «Красота и Здоровье»",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=IrinaVlasova&backgroundColor=7c3aed&textColor=ffffff",
+      "Конкурс красоты — это именно та среда, где наш бренд говорит сам за себя. Мы получили живые отзывы, новых клиентов и мощный охват в соцсетях. Каждая участница и зрительница — наша потенциальная гостья.",
+    by: "Лукина А.М., AL. Alena Lukina — наращивание волос",
+    imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/3b22dbc2-0bd6-42d3-a8c7-8fec00a5b7e0.jpg",
   },
   {
     tempId: 3,
     testimonial:
-      "Организаторы — профессионалы. Всё продумано до мелочей: брендирование, медиа, координация. Я рекомендую «Саранскую красавицу» как надёжную площадку для продвижения бренда.",
-    by: "Дмитрий Орлов, предприниматель",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=DmitryOrlov&backgroundColor=0891b2&textColor=ffffff",
-  },
-  {
-    tempId: 4,
-    testimonial:
-      "Зал был переполнен, атмосфера — потрясающая. Публикации в соцсетях с нашим логотипом набрали десятки тысяч просмотров. Мы уже подтвердили участие в следующем году.",
-    by: "Наталья Степанова, бренд-менеджер, сеть аптек «Фармацея»",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=NatalyaStepanova&backgroundColor=16a34a&textColor=ffffff",
-  },
-  {
-    tempId: 5,
-    testimonial:
-      "Для нас это был первый опыт спонсорства конкурса красоты. Мы были приятно удивлены: целевая аудитория — именно наши клиенты. Конверсия от мероприятия превзошла ожидания.",
-    by: "Марина Фёдорова, владелец студии красоты «Luxe»",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=MarinaFedorova&backgroundColor=dc2626&textColor=ffffff",
-  },
-  {
-    tempId: 6,
-    testimonial:
-      "«Саранская красавица» — это не просто шоу. Это событие, которое объединяет город. Стать его частью в качестве спонсора — значит быть рядом с тем, что важно людям.",
-    by: "Сергей Белов, генеральный директор, IT-компания «ТехноСаранск»",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=SergeyBelov&backgroundColor=2563eb&textColor=ffffff",
-  },
-  {
-    tempId: 7,
-    testimonial:
-      "Я участвовала в конкурсе три года назад, а сейчас веду свой бизнес и сама хочу стать спонсором. Это мероприятие даёт девушкам крылья — и я хочу поддержать это.",
-    by: "Екатерина Лебедева, участница 2021, предприниматель",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=EkaterinaLebedeva&backgroundColor=ea580c&textColor=ffffff",
-  },
-  {
-    tempId: 8,
-    testimonial:
-      "Пресс-волл с нашим логотипом попал во все местные СМИ и социальные сети. Узнаваемость бренда после конкурса выросла ощутимо — и это без дополнительных вложений в рекламу.",
-    by: "Андрей Кириллов, ювелирный дом «Золотая Мордовия»",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AndreyKirillov&backgroundColor=a855f7&textColor=ffffff",
-  },
-  {
-    tempId: 9,
-    testimonial:
-      "Зрители запоминают не только участниц, но и партнёров мероприятия. Наш бренд ассоциируется теперь с красотой, женственностью и праздником — лучшего позиционирования не придумать.",
-    by: "Юлия Иванова, директор, школа танцев «Эстрелья»",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=YuliyaIvanova&backgroundColor=0d9488&textColor=ffffff",
-  },
-  {
-    tempId: 10,
-    testimonial:
-      "Мероприятие отличается высоким уровнем организации и статусной аудиторией. Для нас спонсорство — это инвестиция в репутацию, и «Саранская красавица» оправдала каждый рубль.",
-    by: "Олег Захаров, ресторан «Мордовская усадьба»",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=OlegZakharov&backgroundColor=be185d&textColor=ffffff",
-  },
-  {
-    tempId: 11,
-    testimonial:
-      "Именная номинация от нашего бренда вызвала огромный резонанс. Победительница активно нас упоминает в соцсетях — это живая реклама, которая работает ещё год после конкурса.",
-    by: "Татьяна Михайлова, бренд «TM Cosmetics Saransk»",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=TatianaMikhailova&backgroundColor=1d4ed8&textColor=ffffff",
+      "Неожиданно для себя нашли здесь именно ту аудиторию — активные семьи, владельцы загородных домов. Узнаваемость НЕВА выросла заметно. Организаторы — профессионалы, всё чётко и в срок. Однозначно рекомендуем.",
+    by: "Щербаков К.В., НЕВА Септик-Сервис",
+    imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/5c192c18-efda-4ab7-9af3-9e98ae21893a.jpg",
   },
 ]
 
@@ -136,7 +79,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ position, testimonial
       <img
         src={testimonial.imgSrc || "/placeholder.svg"}
         alt={`${testimonial.by.split(",")[0]}`}
-        className="mb-4 h-14 w-12 bg-gray-100 object-cover object-top"
+        className="mb-4 h-14 w-14 bg-gray-100 object-contain object-center rounded"
         style={{
           boxShadow: "3px 3px 0px hsl(var(--background))",
         }}
