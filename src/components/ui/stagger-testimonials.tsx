@@ -12,6 +12,8 @@ const testimonials = [
       "Спонсорство «Саранской красавицы» стало для нас настоящим открытием. Наши гости узнавали логотип Культ на всех площадках мероприятия — атмосфера шоу идеально совпала с духом нашего заведения. Уже готовимся к следующему году.",
     by: "Луконин Н.А., ресто-клуб «Культ»",
     imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/f92f283e-1c25-4233-971d-a43abb133a22.jpg",
+    imgObjectPosition: "50% 50%",
+    imgScale: "scale(1.8)",
   },
   {
     tempId: 1,
@@ -19,6 +21,8 @@ const testimonials = [
       "Партнёрство с «Саранской красавицей» дало нам прямой выход на целевую аудиторию — владельцев автомобилей, которые ценят качество. Публикации с нашим брендом охватили тысячи подписчиков. Отличная инвестиция в репутацию студии.",
     by: "Ульянов А.В., детейлинг-студия Toner 13/58 Pro",
     imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/d442d7e6-55f3-47f8-b903-9b4315ad9a91.jpg",
+    imgObjectPosition: "50% 50%",
+    imgScale: "scale(1.6)",
   },
   {
     tempId: 2,
@@ -26,6 +30,8 @@ const testimonials = [
       "Конкурс красоты — это именно та среда, где наш бренд говорит сам за себя. Мы получили живые отзывы, новых клиентов и мощный охват в соцсетях. Каждая участница и зрительница — наша потенциальная гостья.",
     by: "Лукина А.М., AL. Alena Lukina — наращивание волос",
     imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/3b22dbc2-0bd6-42d3-a8c7-8fec00a5b7e0.jpg",
+    imgObjectPosition: "50% 55%",
+    imgScale: "scale(1.5)",
   },
   {
     tempId: 3,
@@ -33,12 +39,14 @@ const testimonials = [
       "Неожиданно для себя нашли здесь именно ту аудиторию — активные семьи, владельцы загородных домов. Узнаваемость НЕВА выросла заметно. Организаторы — профессионалы, всё чётко и в срок. Однозначно рекомендуем.",
     by: "Щербаков К.В., НЕВА Септик-Сервис",
     imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/5c192c18-efda-4ab7-9af3-9e98ae21893a.jpg",
+    imgObjectPosition: "50% 35%",
+    imgScale: "scale(1.1)",
   },
 ]
 
 interface TestimonialCardProps {
   position: number
-  testimonial: (typeof testimonials)[0]
+  testimonial: (typeof testimonials)[0] & { imgObjectPosition?: string; imgScale?: string }
   handleMove: (steps: number) => void
   cardSize: number
 }
@@ -76,14 +84,21 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ position, testimonial
           height: 2,
         }}
       />
-      <img
-        src={testimonial.imgSrc || "/placeholder.svg"}
-        alt={`${testimonial.by.split(",")[0]}`}
-        className="mb-4 h-14 w-14 bg-gray-100 object-contain object-center rounded"
-        style={{
-          boxShadow: "3px 3px 0px hsl(var(--background))",
-        }}
-      />
+      <div
+        className="mb-4 h-14 w-14 rounded-full overflow-hidden flex-shrink-0"
+        style={{ boxShadow: "3px 3px 0px hsl(var(--background))" }}
+      >
+        <img
+          src={testimonial.imgSrc || "/placeholder.svg"}
+          alt={`${testimonial.by.split(",")[0]}`}
+          className="h-full w-full object-cover"
+          style={{
+            objectPosition: testimonial.imgObjectPosition || "50% 50%",
+            transform: testimonial.imgScale || "scale(1)",
+            transformOrigin: "center",
+          }}
+        />
+      </div>
       <h3 className={cn("text-base sm:text-xl font-medium", isCenter ? "text-white" : "text-gray-900")}>
         "{testimonial.testimonial}"
       </h3>
