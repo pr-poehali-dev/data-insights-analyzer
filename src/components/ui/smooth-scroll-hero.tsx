@@ -12,7 +12,7 @@ interface SmoothScrollHeroProps {
 
 const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({ desktopImage, mobileImage }) => {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden" style={{ backgroundColor: "#0d0d0d" }}>
+    <div className="relative w-full min-h-screen overflow-hidden" style={{ backgroundColor: "#1D4F32" }}>
       {/* Gold top border */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent" />
 
