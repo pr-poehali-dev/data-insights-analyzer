@@ -1,190 +1,89 @@
 import type React from "react"
-import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import { cn } from "@/lib/utils"
-
-const SQRT_5000 = Math.sqrt(5000)
 
 const testimonials = [
   {
-    tempId: 0,
+    id: 0,
     testimonial:
       "Спонсорство «Саранской красавицы» стало для нас настоящим открытием. Наши гости узнавали логотип Культ на всех площадках мероприятия — атмосфера шоу идеально совпала с духом нашего заведения. Уже готовимся к следующему году.",
-    by: "Луконин Н.А., ресто-клуб «Культ»",
+    by: "Луконин Н.А.",
+    company: "Ресто-клуб «Культ»",
     imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/a21376a9-61ad-41eb-89a1-20e21ce158db.jpg",
     imgObjectPosition: "50% 50%",
     imgScale: "scale(2.8)",
+    rotate: "-3deg",
+    translateY: "0px",
   },
   {
-    tempId: 1,
+    id: 1,
     testimonial:
       "Партнёрство с «Саранской красавицей» дало нам прямой выход на целевую аудиторию — владельцев автомобилей, которые ценят качество. Публикации с нашим брендом охватили тысячи подписчиков. Отличная инвестиция в репутацию студии.",
-    by: "Ульянов А.В., детейлинг-студия Toner 13/58 Pro",
+    by: "Ульянов А.В.",
+    company: "Toner 13/58 Pro",
     imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/4dd29801-71a9-416b-a495-712d644248ac.jpg",
     imgObjectPosition: "50% 48%",
     imgScale: "scale(2.4)",
+    rotate: "2deg",
+    translateY: "40px",
   },
   {
-    tempId: 2,
+    id: 2,
     testimonial:
       "Конкурс красоты — это именно та среда, где наш бренд говорит сам за себя. Мы получили живые отзывы, новых клиентов и мощный охват в соцсетях. Каждая участница и зрительница — наша потенциальная гостья.",
-    by: "Лукина А.М., AL. Alena Lukina — наращивание волос",
+    by: "Лукина А.М.",
+    company: "AL. Alena Lukina",
     imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/8da12843-74b7-43e3-953f-0d86510e2875.jpg",
     imgObjectPosition: "50% 50%",
     imgScale: "scale(1.7)",
+    rotate: "-1.5deg",
+    translateY: "20px",
   },
   {
-    tempId: 3,
+    id: 3,
     testimonial:
       "Неожиданно для себя нашли здесь именно ту аудиторию — активные семьи, владельцы загородных домов. Узнаваемость НЕВА выросла заметно. Организаторы — профессионалы, всё чётко и в срок. Однозначно рекомендуем.",
-    by: "Щербаков К.В., НЕВА Септик-Сервис",
+    by: "Щербаков К.В.",
+    company: "НЕВА Септик-Сервис",
     imgSrc: "https://cdn.poehali.dev/projects/ef77ea85-5071-4b1f-893a-2d42a52e5e31/bucket/e4d8d180-b1b5-488e-8322-aa8b3b3e0152.jpg",
     imgObjectPosition: "50% 30%",
     imgScale: "scale(0.75)",
+    rotate: "3deg",
+    translateY: "-10px",
   },
 ]
 
-interface TestimonialCardProps {
-  position: number
-  testimonial: (typeof testimonials)[0] & { imgObjectPosition?: string; imgScale?: string }
-  handleMove: (steps: number) => void
-  cardSize: number
-}
-
-const TestimonialCard: React.FC<TestimonialCardProps> = ({ position, testimonial, handleMove, cardSize }) => {
-  const isCenter = position === 0
-  return (
-    <div
-      onClick={() => handleMove(position)}
-      className={cn(
-        "absolute left-1/2 top-1/2 cursor-pointer border-2 p-8 transition-all duration-500 ease-in-out",
-        isCenter
-          ? "z-10 bg-gray-900 text-white border-gray-900"
-          : "z-0 bg-white text-gray-900 border-gray-200 hover:border-gray-400",
-      )}
-      style={{
-        width: cardSize,
-        height: cardSize,
-        clipPath: `polygon(50px 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, calc(100% - 50px) 100%, 50px 100%, 0 100%, 0 0)`,
-        transform: `
-          translate(-50%, -50%)
-          translateX(${(cardSize / 1.5) * position}px)
-          translateY(${isCenter ? -65 : position % 2 ? 15 : -15}px)
-          rotate(${isCenter ? 0 : position % 2 ? 2.5 : -2.5}deg)
-        `,
-        boxShadow: isCenter ? "0px 8px 0px 4px hsl(var(--border))" : "0px 0px 0px 0px transparent",
-      }}
-    >
-      <span
-        className="absolute block origin-top-right rotate-45 bg-gray-300"
-        style={{
-          right: -2,
-          top: 48,
-          width: SQRT_5000,
-          height: 2,
-        }}
-      />
-      <div
-        className="mb-4 h-14 w-14 rounded-full overflow-hidden flex-shrink-0"
-        style={{ boxShadow: "3px 3px 0px hsl(var(--background))" }}
-      >
-        <img
-          src={testimonial.imgSrc || "/placeholder.svg"}
-          alt={`${testimonial.by.split(",")[0]}`}
-          className="h-full w-full object-cover"
-          style={{
-            objectPosition: testimonial.imgObjectPosition || "50% 50%",
-            transform: testimonial.imgScale || "scale(1)",
-            transformOrigin: "center",
-          }}
-        />
-      </div>
-      <h3 className={cn("text-base sm:text-xl font-medium", isCenter ? "text-white" : "text-gray-900")}>
-        "{testimonial.testimonial}"
-      </h3>
-      <p
-        className={cn(
-          "absolute bottom-8 left-8 right-8 mt-2 text-sm italic",
-          isCenter ? "text-gray-300" : "text-gray-600",
-        )}
-      >
-        - {testimonial.by}
-      </p>
-    </div>
-  )
-}
-
 export const StaggerTestimonials: React.FC = () => {
-  const [cardSize, setCardSize] = useState(365)
-  const [testimonialsList, setTestimonialsList] = useState(testimonials)
-
-  const handleMove = (steps: number) => {
-    const newList = [...testimonialsList]
-    if (steps > 0) {
-      for (let i = steps; i > 0; i--) {
-        const item = newList.shift()
-        if (!item) return
-        newList.push({ ...item, tempId: Math.random() })
-      }
-    } else {
-      for (let i = steps; i < 0; i++) {
-        const item = newList.pop()
-        if (!item) return
-        newList.unshift({ ...item, tempId: Math.random() })
-      }
-    }
-    setTestimonialsList(newList)
-  }
-
-  useEffect(() => {
-    const updateSize = () => {
-      const { matches } = window.matchMedia("(min-width: 640px)")
-      setCardSize(matches ? 365 : 290)
-    }
-    updateSize()
-    window.addEventListener("resize", updateSize)
-    return () => window.removeEventListener("resize", updateSize)
-  }, [])
-
   return (
-    <div className="relative w-full overflow-hidden bg-white" style={{ height: 600 }}>
-      {testimonialsList.map((testimonial, index) => {
-        const position =
-          testimonialsList.length % 2 ? index - (testimonialsList.length + 1) / 2 : index - testimonialsList.length / 2
-        return (
-          <TestimonialCard
-            key={testimonial.tempId}
-            testimonial={testimonial}
-            handleMove={handleMove}
-            position={position}
-            cardSize={cardSize}
-          />
-        )
-      })}
-      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-        <button
-          onClick={() => handleMove(-1)}
-          className={cn(
-            "flex h-14 w-14 items-center justify-center text-2xl transition-colors",
-            "bg-white border-2 border-gray-300 hover:bg-gray-900 hover:text-white",
-            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2",
-          )}
-          aria-label="Предыдущий отзыв"
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-2">
+      {testimonials.map((t) => (
+        <div
+          key={t.id}
+          className="bg-white border-2 border-gray-200 p-6 shadow-md"
+          style={{
+            transform: `rotate(${t.rotate}) translateY(${t.translateY})`,
+            clipPath: "polygon(24px 0%, 100% 0%, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%, 0 24px)",
+          }}
         >
-          <ChevronLeft />
-        </button>
-        <button
-          onClick={() => handleMove(1)}
-          className={cn(
-            "flex h-14 w-14 items-center justify-center text-2xl transition-colors",
-            "bg-white border-2 border-gray-300 hover:bg-gray-900 hover:text-white",
-            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2",
-          )}
-          aria-label="Следующий отзыв"
-        >
-          <ChevronRight />
-        </button>
-      </div>
+          <div className="mb-4 h-14 w-14 rounded-full overflow-hidden">
+            <img
+              src={t.imgSrc}
+              alt={t.by}
+              className="h-full w-full object-cover"
+              style={{
+                objectPosition: t.imgObjectPosition,
+                transform: t.imgScale,
+                transformOrigin: "center",
+              }}
+            />
+          </div>
+          <p className="text-gray-800 text-sm leading-relaxed mb-4">
+            «{t.testimonial}»
+          </p>
+          <div className="border-t border-gray-100 pt-3">
+            <p className="text-gray-900 font-semibold text-sm">{t.by}</p>
+            <p className="text-gray-500 text-xs">{t.company}</p>
+          </div>
+        </div>
+      ))}
     </div>
   )
 }
