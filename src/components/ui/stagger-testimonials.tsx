@@ -57,7 +57,7 @@ export const StaggerTestimonials: React.FC = () => {
       {testimonials.map((t) => (
         <div
           key={t.id}
-          className={`${t.id === 3 ? "bg-[#1D4F32] border-[#1D4F32]" : "bg-white border-gray-200"} border-2 p-6 shadow-md`}
+          className="bg-white border-2 border-gray-200 p-6 shadow-md"
           style={{
             transform: `rotate(${t.rotate}) translateY(${t.translateY})`,
             clipPath: "polygon(24px 0%, 100% 0%, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%, 0 24px)",
@@ -75,12 +75,12 @@ export const StaggerTestimonials: React.FC = () => {
               }}
             />
           </div>
-          <p className={`${t.id === 3 ? "text-white/90" : "text-gray-800"} text-sm leading-relaxed mb-4`}>
+          <p className="text-gray-800 text-sm leading-relaxed mb-4">
             «{t.testimonial}»
           </p>
-          <div className={`border-t ${t.id === 3 ? "border-white/20" : "border-gray-100"} pt-3`}>
-            <p className={`${t.id === 3 ? "text-white" : "text-gray-900"} font-semibold text-sm`}>{t.by}</p>
-            <p className={`${t.id === 3 ? "text-white/60" : "text-gray-500"} text-xs`}>{t.company}</p>
+          <div className="border-t border-gray-100 pt-3">
+            <p className="text-gray-900 font-semibold text-sm">{t.by}</p>
+            <p className="text-gray-500 text-xs">{t.company}</p>
           </div>
         </div>
       ))}
