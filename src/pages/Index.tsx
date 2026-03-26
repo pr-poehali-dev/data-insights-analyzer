@@ -6,6 +6,7 @@ import SmoothScrollHero from "@/components/ui/smooth-scroll-hero"
 import SponsorBenefitsGrid from "@/components/SponsorBenefitsGrid"
 import EventLocation from "@/components/EventLocation"
 import PhotoGallery from "@/components/PhotoGallery"
+import SecretArtistTeaser from "@/components/SecretArtistTeaser"
 
 export default function Index() {
   const missionStatement =
@@ -109,6 +110,9 @@ export default function Index() {
 
       {/* Photo Gallery */}
       <PhotoGallery />
+
+      {/* Secret Artist Teaser */}
+      <SecretArtistTeaser />
 
       {/* Sponsorship Packages Section */}
       <section className="relative py-20 bg-gray-50">
