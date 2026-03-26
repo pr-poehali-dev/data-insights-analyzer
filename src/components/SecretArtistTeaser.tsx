@@ -31,7 +31,7 @@ export default function SecretArtistTeaser() {
         >
           НА СЦЕНЕ ВЫСТУПИТ
           <br />
-          <span className="text-yellow-400" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 300, fontSize: "clamp(3rem, 8vw, 6.5rem)", letterSpacing: "0.02em", lineHeight: 1.1 }}>известный артист</span>
+          <span className="text-yellow-400" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 300, fontSize: "clamp(2rem, 5.5vw, 4.5rem)", letterSpacing: "0.02em", lineHeight: 1.1 }}>известный артист</span>
         </h2>
 
         <div className="flex items-center gap-4 justify-center mb-10">
