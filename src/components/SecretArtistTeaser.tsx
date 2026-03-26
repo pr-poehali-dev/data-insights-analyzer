@@ -27,7 +27,7 @@ export default function SecretArtistTeaser() {
 
         <h2
           className="text-white font-light tracking-widest mb-6"
-          style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2.5rem, 6vw, 5rem)", lineHeight: 1.15 }}
+          style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(0.7rem, 1vw, 0.85rem)", lineHeight: 1.15 }}
         >
           На сцене выступит
           <br />
