@@ -70,7 +70,7 @@ export default function Index() {
                 { value: "3 000+", label: "Зрителей на площадке" },
                 { value: "100 000+", label: "Охватов" },
                 { value: "13", label: "Участниц конкурса" },
-                { value: "3", label: "Лет проводим событие" },
+                { value: "3", label: "Года мероприятию" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="text-3xl md:text-4xl font-light text-gray-900 mb-2" style={{ fontFamily: "'Cormorant Garamond', serif", letterSpacing: "0.05em" }}>{stat.value}</div>
