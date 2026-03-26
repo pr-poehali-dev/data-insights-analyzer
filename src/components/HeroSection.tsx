@@ -1,29 +1,9 @@
 import { Menu, X } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Icon from "@/components/ui/icon"
-
-function useCountdown(target: Date) {
-  const calc = () => {
-    const diff = target.getTime() - Date.now()
-    if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 }
-    return {
-      days: Math.floor(diff / 86400000),
-      hours: Math.floor((diff % 86400000) / 3600000),
-      minutes: Math.floor((diff % 3600000) / 60000),
-      seconds: Math.floor((diff % 60000) / 1000),
-    }
-  }
-  const [time, setTime] = useState(calc)
-  useEffect(() => {
-    const id = setInterval(() => setTime(calc()), 1000)
-    return () => clearInterval(id)
-  }, [])
-  return time
-}
 
 export default function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const countdown = useCountdown(new Date("2026-07-11T00:00:00"))
 
   const navItems = [
     { name: "О мероприятии", href: "#mission" },
@@ -144,26 +124,6 @@ export default function HeroSection() {
             <p className="text-white/70 text-base leading-relaxed mb-8 max-w-md md:ml-auto">
               Станьте частью главного культурного события Саранска. Прямой контакт с тысячами жителей города и уникальные возможности для продвижения вашего бренда.
             </p>
-
-            {/* Countdown */}
-            <div className="mb-6">
-              <p className="text-white/30 text-xs tracking-[0.3em] uppercase mb-3 md:text-right">До мероприятия</p>
-              <div className="grid grid-cols-4 gap-2">
-                {[
-                  { value: countdown.days, label: "Дней" },
-                  { value: countdown.hours, label: "Часов" },
-                  { value: countdown.minutes, label: "Минут" },
-                  { value: countdown.seconds, label: "Секунд" },
-                ].map((u) => (
-                  <div key={u.label} className="border border-yellow-400/30 py-3 text-center" style={{ backgroundColor: "rgba(255,255,255,0.04)" }}>
-                    <div className="text-yellow-400 font-light leading-none mb-1" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2rem" }}>
-                      {String(u.value).padStart(2, "0")}
-                    </div>
-                    <div className="text-white/30 text-[10px] tracking-widest uppercase">{u.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
 
             <div className="grid grid-cols-3 gap-4">
               {[
