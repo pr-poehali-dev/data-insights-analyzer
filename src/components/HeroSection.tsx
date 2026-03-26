@@ -104,6 +104,11 @@ export default function HeroSection() {
               <p className="text-white/60 text-sm tracking-widest uppercase">Конкурс красоты и таланта</p>
             </div>
 
+            <div className="flex items-center gap-3 mb-8">
+              <Icon name="Calendar" size={14} className="text-yellow-400" />
+              <p className="text-yellow-300/90 text-sm font-medium tracking-[0.2em] uppercase">11 июля 2026</p>
+            </div>
+
             <button
               onClick={() => scrollToSection("#join")}
               className="inline-flex items-center gap-3 text-gray-900 font-medium text-sm tracking-widest uppercase px-8 py-4 transition-all duration-300 hover:scale-105"
