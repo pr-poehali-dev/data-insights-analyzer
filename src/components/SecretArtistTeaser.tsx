@@ -27,11 +27,11 @@ export default function SecretArtistTeaser() {
 
         <h2
           className="text-white mb-6"
-          style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2rem, 5vw, 4rem)", lineHeight: 1.2, fontWeight: 400, letterSpacing: "0.04em" }}
+          style={{ fontFamily: "'Tenor Sans', sans-serif", fontSize: "clamp(2rem, 5vw, 4rem)", lineHeight: 1.2, fontWeight: 400, letterSpacing: "0.08em" }}
         >
           На сцене выступит
           <br />
-          <span className="text-yellow-400" style={{ fontStyle: "italic", fontWeight: 700 }}>известный артист</span>
+          <span className="text-yellow-400" style={{ fontFamily: "'Tenor Sans', sans-serif", fontWeight: 400, letterSpacing: "0.12em" }}>известный артист</span>
         </h2>
 
         <div className="flex items-center gap-4 justify-center mb-10">
